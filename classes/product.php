@@ -1,7 +1,8 @@
 <?php
-
+require_once __DIR__ . "/../traits/nameItem.php";
 class product {
-    protected $name;
+    use nameItem;
+
     protected $image;
     protected $price;
     protected $category;
@@ -12,10 +13,6 @@ class product {
         $this->image = $image;
         $this->price = $price;
         $this->category = $category;
-    }
-
-    public function getName() {
-        return $this->name;
     }
 
     public function getImage() {
